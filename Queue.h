@@ -6,16 +6,18 @@ class Queue {
 	NodePtr headPtr,tailPtr;
 	int size;
 public:
-    void enqueue(int,int);
+  /*3. Modify enqueue here to take in 2 info*/
+    void enqueue(int;
     int dequeue();
     Queue();
     ~Queue();
 };
 
 
-void Queue::enqueue(int x,int y){
-  cout<<"ENQ"<<endl;
-  NodePtr new_node= new NODE(x,y);
+  /*4. Also odifiy enqueue here to take in 2 info*/
+void Queue::enqueue(int x){
+ 
+  NodePtr new_node= new NODE(x);
 if(new_node){ 
     /* Add head and tail for me please */
        if(size==0) headPtr=new_node;
@@ -31,7 +33,8 @@ int Queue::dequeue(){
     
      NodePtr t=headPtr;
      headPtr=headPtr->get_next();
-     int v=t->get_price(); // TO RETREIVE the price
+     /*5 Your node may need to have  get_price to track the price*/
+     int v=t->get_price(); 
      if(headPtr==NULL) tailPtr=NULL;
      delete t;
      --size;

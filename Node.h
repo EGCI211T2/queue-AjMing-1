@@ -1,14 +1,17 @@
 #ifndef node_h
 #define node_h
 
+/*6 You can put your menu list here*/
   string menu[] ={"Ramen","Somtum","Fried Chicken"};
   int price[]= {100,20,50};
 
 class NODE{
+    /*7 detail on node details*/
      int ord,qty;
     NODE *nextPtr;
 public:
-    NODE(int,int);
+
+    NODE(int);
     ~NODE();
     void set_next(NODE*);
     NODE* get_next();
@@ -35,6 +38,9 @@ int NODE::get_value(){
 
 }
 
+
+
+/* Your menu choice*/
 int NODE::get_price(){
 
     

@@ -13,20 +13,16 @@ int main(int argc , char **argv) {
         if(strcmp(argv[i],"x")==0){
             price=q.dequeue();
             cout<<"You have to pay "<<price<<endl;
-            do{
-               cout<<"Cash:";
-              cin>>cash;
-            }
-            while(price>cash);
-            cout<<"Thank you"<<endl;
-            if(cash-price >0) cout<<"Here is your "<<cash-price<<" change."<<endl;
+            /* 1.Ask the customer to pay*/
 
             cout<<"=============="<<endl;
 
         }
         else {
-           if(i+1<argc) q.enqueue(atoi(argv[i]),atoi(argv[i+1]));
-           i++;
+
+           /* 2.MODIFIED enqueue here to take in 2 info at a time*/
+            q.enqueue(atoi(argv[i]));
+         
            
         }
  }
