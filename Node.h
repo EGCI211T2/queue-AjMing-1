@@ -58,7 +58,7 @@ void NODE::set_next(NODE *t){
 
 }
 NODE::~NODE(){
-     cout<<"Removing "<<menu[ord-1]<<endl;
+     cout<<"dequeing  "<<ord<<endl;
 
 }
 
