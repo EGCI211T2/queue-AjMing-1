@@ -20,10 +20,8 @@ int main(int argc , char **argv) {
             else if (price!=-1){
               cout<<"You have to pay "<<price<<endl;
             /* 1.Ask the customer to pay*/
-            while(1){
-              cout<<"Cash: ";
-              int paid;
-              cin>>paid;
+            int paid;
+            while(cout << "Cash: " && cin >> paid){
               if (paid >= price) {
                 cout<<"Thank you"<<endl;
                 if (paid > price) {
@@ -31,7 +29,6 @@ int main(int argc , char **argv) {
                 }
                 break; 
               } 
-              else continue;
             }
             }
 
