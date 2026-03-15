@@ -9,6 +9,7 @@ public:
   /*3. Modify enqueue here to take in 2 info*/
     void enqueue(int,int);
     int dequeue();
+    int get_size(){return size;}
     Queue();
     ~Queue();
 };

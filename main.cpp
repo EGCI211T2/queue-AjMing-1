@@ -12,14 +12,23 @@ int main(int argc , char **argv) {
       int price,cash;
         if(strcmp(argv[i],"x")==0){
             price=q.dequeue();
-            cout<<"You have to pay "<<price<<endl;
+            if(price==0){cout<<"We don't have that food. You don't have to pay."<<endl;}
+            else{
+              cout<<"You have to pay "<<price<<endl;
             /* 1.Ask the customer to pay*/
             while(1){
               cout<<"Cash: ";
               int paid;
               cin>>paid;
-              if (paid==price) break;
-              else 
+              if (paid >= price) {
+                cout<<"Thank you"<<endl;
+                if (paid > price) {
+                    cout << "Here is your " << paid - price << " change." << endl;
+                }
+                break; 
+              } 
+              else continue;
+            }
             }
 
             cout<<"=============="<<endl;
@@ -41,5 +50,7 @@ int main(int argc , char **argv) {
             i++;
         }
  }
+
+  cout<<"The shop is closed. There are "<<q.get_size()<<" left."<<endl;
   return 0;
 }
