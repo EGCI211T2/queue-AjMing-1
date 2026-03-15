@@ -10,9 +10,13 @@ int main(int argc , char **argv) {
 
  for(i=1;i<argc;i++){
       int price,cash;
+
         if(strcmp(argv[i],"x")==0){
             price=q.dequeue();
-            if(price==0){cout<<"We don't have that food. You don't have to pay."<<endl;}
+
+            if(price==0)
+            {cout<<"We don't have that food. You don't have to pay."<<endl;}
+
             else{
               cout<<"You have to pay "<<price<<endl;
             /* 1.Ask the customer to pay*/
@@ -35,7 +39,6 @@ int main(int argc , char **argv) {
 
         }
         else {
-
            /* 2.MODIFIED enqueue here to take in 2 info at a time*/
             q.enqueue(atoi(argv[i]),atoi(argv[i+1]));
             i++;
